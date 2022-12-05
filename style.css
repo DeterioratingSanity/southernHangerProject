@@ -41,11 +41,11 @@ body{
   border-radius: 50%;
   position: absolute;
   animation: spin 15s linear infinite reverse;
-  transition: 1s;
+  transition: .5s;
 }
 .off{
   filter: grayscale(80%);
-  transition: 1s;
+  transition: .5s;
 }
 @keyframes spin {
   100% {

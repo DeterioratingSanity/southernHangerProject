@@ -33,7 +33,9 @@
     </div>
 
     <script>
-    var radius = 350; // adjust to move out items in and out
+      //if ($(window).width() < 1280) {
+      
+    var radius = /*350*/ $(window).width()*15%; // adjust to move out items in and out
     var fields = $('.item'),
       container = $('#container'),
       width = container.width(),

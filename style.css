@@ -1,1 +1,52 @@
+body{
+  margin: 0;
+}
 
+#head{
+  position: relative;
+  height: 100vh;
+}
+#heroImg{
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height:50vh;
+}
+#main{
+  background-color: red;
+  height:100vh;
+}
+#supercontainer{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#container {
+  margin: 10px auto;
+  position: relative;
+  animation: spin 15s linear infinite;
+}
+#container:hover{
+   animation-play-state:paused;
+}
+#container:hover .item{
+   animation-play-state:paused
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  animation: spin 15s linear infinite reverse;
+}
+.off{
+  filter: grayscale(100%);
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
     <title>Southern Hanger</title>
     <meta charset="UTF-8">
     <meta name="description" content="Shopping in the Golden Isles">
     <meta name="keywords" content="Shopping, St. Simons, Brunswick, Golden Isles, Apparel, Attire, Clothes, Style">
     <meta name="author" content="W. Wilson">
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
-  
+
   <body>
-    Southern Hanger
+    <div id="head">
+      <img src="./images/favicon.png" alt="hero image" id="heroImg">
+
+      <div id="supercontainer">
+        <div id="container">
+          <img src="./images/favicon.png" alt="rotation" class="item">
+          <img src="./images/favicon.png" alt="rotation" class="item">
+          <img src="./images/favicon.png" alt="rotation" class="item">
+          <img src="./images/favicon.png" alt="rotation" class="item">
+          <img src="./images/favicon.png" alt="rotation" class="item">
+          <img src="./images/favicon.png" alt="rotation" class="item">
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+
+
+    </div>
+
+    <script>
+    var radius = 350; // adjust to move out items in and out
+    var fields = $('.item'),
+      container = $('#container'),
+      width = container.width(),
+      height = container.height();
+    var angle = 0,
+      step = (2 * Math.PI) / fields.length;
+
+      function pageWidth(){
+          fields = $('.item'),
+          container = $('#container'),
+          width = container.width(),
+          height = container.height();
+        }
+
+        window.addEventListener("resize",pageWidth);
+        pageWidth();
+
+    fields.each(function() {
+      var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);
+      var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
+      if (window.console) {
+        console.log($(this).text(), x, y);
+      }
+    $(this).css({
+      left: x + 'px',
+      top: y + 'px'
+    });
+    angle += step;
+  });
+
+    $('.item').mouseover(function(){
+      $('.item').addClass('off');
+      $(this).removeClass('off');
+    })
+    $('.item').mouseout(function(){
+      $('.item').removeClass('off');
+    })
+  </script>
   </body>
-  
+
 </html>

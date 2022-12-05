@@ -11,7 +11,7 @@ body{
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   height:50vmin;
+   height:50vh;
 }
 #main{
   background-color: red;
@@ -36,8 +36,8 @@ body{
 }
 
 .item {
-  width: 30vmin;
-  height: 30vmin;
+  width: 30vh;
+  height: 30vh;
   border-radius: 50%;
   position: absolute;
   animation: spin 15s linear infinite reverse;

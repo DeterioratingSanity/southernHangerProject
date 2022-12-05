@@ -35,7 +35,13 @@
     <script>
       //if ($(window).width() < 1280) {
       
-    var radius = 350; /*$(window).width()*15%;*/ // adjust to move out items in and out
+    		function pageWidth(){
+      		var radius = /*350;*/ $(window).width()/2.5;
+        }
+        $( window ).resize(function() {
+          pageWidth();
+        });
+    radius = /*350;*/ $(window).height()/2; // adjust to move out items in and out
     var fields = $('.item'),
       container = $('#container'),
       width = container.width(),
@@ -49,9 +55,6 @@
           width = container.width(),
           height = container.height();
         }
-
-        window.addEventListener("resize",pageWidth);
-        pageWidth();
 
     fields.each(function() {
       var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);

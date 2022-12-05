@@ -43,7 +43,7 @@ body{
   animation: spin 15s linear infinite reverse;
 }
 .off{
-  filter: grayscale(60%);
+  filter: grayscale(80%);
 }
 @keyframes spin {
   100% {

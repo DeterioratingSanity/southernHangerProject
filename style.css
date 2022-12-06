@@ -24,7 +24,6 @@ body{
   transform: translate(-50%, -50%);
 }
 #container {
-  margin: 10px auto;
   position: relative;
   animation: spin 15s linear infinite;
 }
@@ -36,8 +35,8 @@ body{
 }
 
 .item {
-  width: 30vh;
-  height: 30vh;
+  width: 20vh;
+  height: 20vh;
   border-radius: 50%;
   position: absolute;
   animation: spin 15s linear infinite reverse;

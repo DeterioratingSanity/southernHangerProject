@@ -16,29 +16,37 @@ body{
    padding:0;
    filter: drop-shadow(0 0 20px #D01273);
 }
-#heroWrapper{
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
-#heroWrapper .tooltipText {
+
+.tooltip .tooltiptext {
   visibility: hidden;
-  width: 400px;
-  aspect-ratio: 6/1;
-  background-color: #FF405C;
-  line-height:65px;
-  font-size:40px;
+  width: 120px;
+  background-color: black;
   color: #fff;
   text-align: center;
-  border: 5px solid #D01273;
-  border-radius:20px;
+  border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: verdana;
+  top: -5px;
+  left: 110%;
 }
 
-#heroWrapper:hover .tooltipText {
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
   visibility: visible;
 }
 
@@ -65,11 +73,10 @@ body{
 
 .item {
   width: 20vh;
-  height: 20vh;
-  border-radius: 50%;
+  height:20vh;
   position: absolute;
   animation: spin 15s linear infinite reverse;
-  transition: .5s;
+  transition: 0;
 }
 .off{
   filter: grayscale(80%);
@@ -79,4 +86,13 @@ body{
   100% {
     transform: rotate(360deg);
   }
+}
+#first{
+  background: url('./images/favicon.png');
+}
+.on{
+  width:40vh;
+  transition: 0;
+  margin-bottom: -25vh;
+  margin-right: -25vh;
 }

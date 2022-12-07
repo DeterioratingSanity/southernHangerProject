@@ -8,7 +8,11 @@
     <meta name="author" content="W. Wilson">
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    -->
   </head>
 
   <body>
@@ -17,12 +21,19 @@
 
       <div id="supercontainer">
         <div id="container">
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;"></a>
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;"></a>
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;"></a>
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;"></a>
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;"></a>
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;"></a>
+
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item"  ondragstart="return false;"></a>
+
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
+
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
+
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
+
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
+
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
+
         </div>
       </div>
     </div>
@@ -59,9 +70,11 @@
     $('.item').mouseover(function(){
       $('.item').addClass('off');
       $(this).removeClass('off');
+    //  $(this).addClass('on');
     })
     $('.item').mouseout(function(){
       $('.item').removeClass('off');
+    //  $(this).removeClass('on');
     })
 
     $(document).ready(function () {
@@ -69,6 +82,16 @@
           location.reload(true);
       });
     });
+
+    function hover(element){
+      element.setAttribute('src', './images/tempx.png');
+    }
+    function unhover(element){
+      element.setAttribute('src','./images/favicon.png');
+    }
+  </script>
+
+  <script>
   </script>
   </body>
 

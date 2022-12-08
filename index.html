@@ -32,7 +32,7 @@
 
           <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
 
-          <a href="#"><img src="./images/favicon.png" alt="rotation" class="item" ondragstart="return false;" ></a>
+          <a href="#"><img src="./images/ellipsis.png" alt="rotation" class="item" ondragstart="return false;" id="ellip" ></a>
 
         </div>
       </div>
@@ -40,7 +40,41 @@
 
     <div id="main">
 
-
+      <div id="modalBox" class="modal">
+        <span class="close">&times;</span>
+        <div class="roster">
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+          <a href="#"><img src="./images/favicon.png" alt="rotation" class="modalItem"  ondragstart="return false;"></a>
+        </div>
+      <!--
+        <div class="modalContent">
+          eeee
+        </div>
+      -->
+      </div>
     </div>
 
     <script>
@@ -70,11 +104,11 @@
     $('.item').mouseover(function(){
       $('.item').addClass('off');
       $(this).removeClass('off');
-    //  $(this).addClass('on');
+     $(this).addClass('on');
     })
     $('.item').mouseout(function(){
       $('.item').removeClass('off');
-    //  $(this).removeClass('on');
+      $(this).removeClass('on');
     })
 
     $(document).ready(function () {
@@ -89,6 +123,34 @@
     function unhover(element){
       element.setAttribute('src','./images/favicon.png');
     }
+
+
+    //modal
+var modal = document.getElementById("modalBox");
+
+var btn = document.getElementById("modalButton");
+
+var span = document.getElementsByClassName("close")[0];
+
+$('#ellip').click(function() {
+  modal.style.display = "block";
+  $("#container").css('visibility','hidden');
+  $('#heroImg').css('filter','blur(5px) grayscale(100%)');
+});
+
+span.onclick = function() {
+  modal.style.display = "none";
+  $("#container").css('visibility','visible');
+  $('#heroImg').css('filter','blur(0)');
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    $("#container").css('visibility','visible');
+    $('#heroImg').css('filter','blur(0)');
+  }
+}
   </script>
 
   <script>

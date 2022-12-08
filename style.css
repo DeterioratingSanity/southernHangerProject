@@ -7,7 +7,7 @@ body{
 #head{
   position: relative;
   height: 100vh;
-  background-image: url('./images/starburstAlt.svg');
+ /* background-image: url('./images/starburstAlt.svg');  position somewhere else to restore alignment regardless of screen size or aspect ratio*/
 }
 #heroImg{
    position:absolute;

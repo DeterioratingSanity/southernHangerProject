@@ -93,13 +93,15 @@ transition:  visibility 0s, filter 0.2s;
   border-left: 2px solid #473B38;
 }
 .modalItem {
-  width: 20vh;
+  width: 45vh;
   height:20vh;
   position:relative;
   padding: 5vh;
   border-radius:var(--radius-round);
 }
 .roster{
+  margin: auto;
+  text-align: center;
   padding: 5vh;
 }
 .close{

@@ -83,8 +83,9 @@
 
       $(document).ready(function(){
         var randOne = Math.floor(Math.random()*small);
+        /*
         console.log('rand one ' + randOne);
-
+        */
         var randTwo = Math.floor(Math.random()*small);
         if (randTwo == randOne){
           while (randTwo == randOne){
@@ -93,8 +94,9 @@
         } else {
           randTwo = randTwo;
         }
+        /*
         console.log('rand two ' + randTwo);
-
+        */
         var randThree = Math.floor(Math.random()*small);
         if (randThree == randTwo || randThree == randOne){
           while (randThree == randTwo || randThree == randOne){
@@ -103,8 +105,9 @@
         } else {
           randThree = randThree;
         }
+        /*
         console.log('rand three ' + randThree);
-
+        */
         var randFour = Math.floor(Math.random()*small);
         if (randFour == randThree || randFour == randTwo || randFour == randOne){
           while (randFour == randThree || randFour == randTwo || randFour == randOne){
@@ -113,8 +116,9 @@
         } else {
           randFour = randFour;
         }
+        /*
         console.log('rand four ' + randFour);
-
+        */
         var randFive = Math.floor(Math.random()*small);
         if (randFive == randFour || randFive == randThree || randFive == randTwo || randFive == randOne){
           while (randFive == randFour || randFive == randThree || randFive == randTwo || randFive == randOne){
@@ -123,8 +127,9 @@
         } else {
           randFive = randFive;
         }
+        /*
         console.log('rand five ' + randFive);
-
+        */
         $('#rotOne').attr('src', smallList[randOne]);
         $('#rotTwo').attr('src', smallList[randTwo]);
         $('#rotThree').attr('src', smallList[randThree]);

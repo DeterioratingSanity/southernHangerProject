@@ -135,14 +135,17 @@ $('#ellip').click(function() {
   modal.style.display = "block";
   $("#container").css('visibility','hidden');
   $('#heroImg').css('filter','blur(5px) grayscale(100%)');
-  $('body').css('overflow','hidden');
+  /*$('body').css('overflow','hidden');*/
+  $('#head').css("background-image","url(./images/starburstGrey.svg)");
+
 });
 
 span.onclick = function() {
   modal.style.display = "none";
   $("#container").css('visibility','visible');
   $('#heroImg').css('filter','blur(0)');
-  $('body').css('overflow','auto');
+  /*$('body').css('overflow','auto');*/
+  $('#head').css("background-image","url(./images/starburstAlt.svg)");
 }
 
 window.onclick = function(event) {
@@ -150,7 +153,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
     $("#container").css('visibility','visible');
     $('#heroImg').css('filter','blur(0)');
-  $('body').css('overflow','auto');
+  /*$('body').css('overflow','auto');*/
+  $('#head').css("background-image","url(./images/starburstAlt.svg)");
   }
 }
   </script>

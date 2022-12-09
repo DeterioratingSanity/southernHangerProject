@@ -87,7 +87,9 @@
 
         var randTwo = Math.floor(Math.random()*small);
         if (randTwo == randOne){
-          randTwo = Math.floor(Math.random()*small);
+          while (randTwo == randOne){
+            randTwo = Math.floor(Math.random()*small);
+          }
         } else {
           randTwo = randTwo;
         }
@@ -95,7 +97,9 @@
 
         var randThree = Math.floor(Math.random()*small);
         if (randThree == randTwo || randThree == randOne){
-          randThree = Math.floor(Math.random()*small);
+          while (randThree == randTwo || randThree == randOne){
+            randThree = Math.floor(Math.random()*small);
+          }
         } else {
           randThree = randThree;
         }
@@ -103,7 +107,9 @@
 
         var randFour = Math.floor(Math.random()*small);
         if (randFour == randThree || randFour == randTwo || randFour == randOne){
-          randFour = Math.floor(Math.random()*small);
+          while (randFour == randThree || randFour == randTwo || randFour == randOne){
+            randFour = Math.floor(Math.random()*small);
+          }
         } else {
           randFour = randFour;
         }
@@ -111,7 +117,9 @@
 
         var randFive = Math.floor(Math.random()*small);
         if (randFive == randFour || randFive == randThree || randFive == randTwo || randFive == randOne){
-          randFive = Math.floor(Math.random()*small);
+          while (randFive == randFour || randFive == randThree || randFive == randTwo || randFive == randOne){
+            randFive = Math.floor(Math.random()*small);
+          }
         } else {
           randFive = randFive;
         }

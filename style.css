@@ -8,7 +8,6 @@ body{
   position: relative;
   height: 100vh;
  background-image: url('./images/starburstAlt.svg'); /* position somewhere else to restore alignment regardless of screen size or aspect ratio*/
-   background-attachment: fixed;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -25,7 +24,7 @@ body{
 }
 #main{
   background-color: red;
-  height:250vh;
+  height:100vh;
 }
 #supercontainer{
   position:absolute;

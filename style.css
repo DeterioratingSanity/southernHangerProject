@@ -105,7 +105,7 @@ transition:  visibility 0s, filter 0.2s;
   padding: 5vh;
 }
 
-.roster::-webkit-scrollbar {
+#modalBox::-webkit-scrollbar {
  display: none;
 }
 .close{

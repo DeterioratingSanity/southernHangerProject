@@ -97,6 +97,7 @@ transition:  visibility 0s, filter 0.2s;
   position:relative;
   padding: 5vh;
   border-radius:var(--radius-round);
+  transition: 0.5s;
 }
 .roster{
   margin: auto;

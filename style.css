@@ -78,9 +78,6 @@ transition:  visibility 0s, filter 0.2s;
   overflow: auto;
   background-color: rgba(71,59,56,0.4);
 }
-.modal::-webkit-scrollbar {
- display: none;
-}
 .modalContent{
   background-color: #FDF8F2;
   margin: 15% auto;
@@ -106,6 +103,10 @@ transition:  visibility 0s, filter 0.2s;
   margin: auto;
   text-align: center;
   padding: 5vh;
+}
+
+.roster::-webkit-scrollbar {
+ display: none;
 }
 .close{
   color: white;

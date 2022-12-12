@@ -95,7 +95,7 @@ transition:  visibility 0s, filter 0.2s;
   width: 45vh;
   height:20vh;
   position:relative;
-  padding: 5vh;
+  margin: 5vh;
   border-radius:var(--radius-round);
   transition: 0.5s;
 }

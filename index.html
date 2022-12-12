@@ -160,11 +160,21 @@
       $('.item').addClass('off');
       $(this).removeClass('off');
      $(this).addClass('on');
-    })
+    });
     $('.item').mouseout(function(){
       $('.item').removeClass('off');
       $(this).removeClass('on');
-    })
+    });
+      
+     $('.modalItem').mouseover(function(){
+      $('.item').addClass('off');
+      $(this).removeClass('off');
+     $(this).addClass('on');
+    });
+    $('.modalItem').mouseout(function(){
+      $('.item').removeClass('off');
+      $(this).removeClass('on');
+    });
 
     $(document).ready(function () {
       $(window).resize(function () {

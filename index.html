@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Southern Hanger</title>
+    <link href="https://fonts.cdnfonts.com/css/ubuntu-title" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="description" content="Shopping in the Golden Isles">
     <meta name="keywords" content="Shopping, St. Simons, Brunswick, Golden Isles, Apparel, Attire, Clothes, Style">
@@ -16,8 +17,12 @@
   </head>
 
   <body>
+    <div class="popout" id="cocoButton">
+      <span id="popCon">→</span>
+    </div>
+
     <div id="head">
-        <img src="./images/logo.png" alt="hero image" id="heroImg" ondragstart="return false;">
+        <img src="./images/logo.png" alt="hero image" class="heroImg" ondragstart="return false;">
 
       <div id="supercontainer">
         <div id="container">
@@ -36,7 +41,7 @@
 
         </div>
       </div>
-      
+
       <div id="modalBox" class="modal">
         <span class="close">&times;</span>
         <div class="roster">
@@ -66,15 +71,14 @@
           <img src="./images/tempx.png" alt="rotation" class="modalItem"  ondragstart="return false;">
           </div>
       </div>
-      
+
     </div>
-
+    
     <div id="main">
-
-      
     </div>
 
     <script>
+
       //if ($(window).width() < 1280) {
       var smallList = ["./images/logo/small/aftcosmall.png","./images/logo/small/coastalcottonsmall.png","./images/logo/small/oldrowsmall.png","./images/logo/small/southerntidesmall.png","./images/logo/small/fieldstonesmall.png","./images/logo/small/overundersmall.png", "./images/logo/small/marshwearsmall.png", "./images/logo/small/onwardreservesmall.png", "./images/logo/small/peachstatepridesmall.png"];
       var small = smallList.length - 1;
@@ -135,6 +139,7 @@
         $('#rotFive').attr('src', smallList[randFive]);
       });
 
+
     var radius = /*350;*/ $(window).height()/2.6; // adjust to move out items in and out
     var fields = $('.item'),
       container = $('#container'),
@@ -165,7 +170,7 @@
       $('.item').removeClass('off');
       $(this).removeClass('on');
     });
-      
+
      $('.modalItem').mouseover(function(){
       $('.modalItem').addClass('off');
       $(this).removeClass('off');
@@ -182,14 +187,6 @@
       });
     });
 
-    function hover(element){
-      element.setAttribute('src', './images/tempx.png');
-    }
-    function unhover(element){
-      element.setAttribute('src','./images/favicon.png');
-    }
-
-
     //modal
 var modal = document.getElementById("modalBox");
 
@@ -200,7 +197,7 @@ var span = document.getElementsByClassName("close")[0];
 $('#ellip').click(function() {
   modal.style.display = "block";
   $("#container").css('visibility','hidden');
-  $('#heroImg').css('filter','blur(5px) grayscale(100%)');
+  $('.heroImg').css('filter','blur(5px) grayscale(100%)');
   /*$('body').css('overflow','hidden');*/
   $('#head').css("background-image","url(./images/starburstGrey.svg)");
 
@@ -209,7 +206,7 @@ $('#ellip').click(function() {
 span.onclick = function() {
   modal.style.display = "none";
   $("#container").css('visibility','visible');
-  $('#heroImg').css('filter','blur(0)');
+  $('.heroImg').css('filter','blur(0)');
   /*$('body').css('overflow','auto');*/
   $('#head').css("background-image","url(./images/starburstAlt.svg)");
 }
@@ -218,14 +215,26 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     $("#container").css('visibility','visible');
-    $('#heroImg').css('filter','blur(0)');
+    $('.heroImg').css('filter','blur(0)');
   /*$('body').css('overflow','auto');*/
   $('#head').css("background-image","url(./images/starburstAlt.svg)");
   }
 }
-  </script>
 
-  <script>
+  $('.popout').mouseover(function(){
+    $("#popCon").css('transform','rotateY(180deg)');
+    $('#popText').css('visibility',"visible");
+  })
+  $('.popout').mouseout(function(){
+    $("#popCon").css('transform','rotateY(0)');
+    $('#popText').css('visibility',"hidden");
+  })
+
+  $('#cocoButton').click(function(){
+    window.open('./special.html','_self');
+    return false;
+  });
+
   </script>
   </body>
 

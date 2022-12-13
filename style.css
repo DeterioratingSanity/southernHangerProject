@@ -68,12 +68,14 @@ background-image: url('./images/starburstAlt.svg'); /* position somewhere else t
   position: absolute;
   animation: spin 15s linear infinite reverse;
   transition:  visibility 0s, filter 0.5s;
+  cursor: pointer;
 }
 .specialItem{
     width: 20vh;
     height:20vh;
     position: absolute;
     animation: spin 15s linear infinite reverse;
+  cursor: pointer;
 }
 .off{
   filter: grayscale(80%);
@@ -122,6 +124,7 @@ transition:  visibility 0s, filter 0.2s;
   margin: 5vh;
   border-radius:var(--radius-round);
   transition: 0.5s;
+  cursor: pointer;
 }
 .roster{
   margin: auto;
@@ -181,7 +184,7 @@ transition:  visibility 0s, filter 0.2s;
   transition:  visibility 0s, transform 1s;
   cursor: pointer;
    font-family: 'Ubuntu-Title', sans-serif;
-  line-height: 100%;
+  line-height: 10vh;
 }
 #popText{
   visibility: hidden;

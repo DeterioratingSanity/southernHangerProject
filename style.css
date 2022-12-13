@@ -178,7 +178,7 @@ transition:  visibility 0s, filter 0.2s;
 #popCon{
   color:white;
   font-size: 5vh;
-  transition:.5s;
+  transition:1s;
   cursor: pointer;
 }
 #popText{

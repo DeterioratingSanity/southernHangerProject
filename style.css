@@ -169,16 +169,16 @@ transition:  visibility 0s, filter 0.2s;
   border-radius: 0 var(--radius-round) var(--radius-round) 0;
 
   cursor: pointer;
-  transition:.5s;
+  transition:  visibility 0s, transform 0.5s, padding 0.5s;
 }
 .popout:hover{
   padding-left:20vh;
-  transition:.5s;
+  transition:  visibility 0s, transform 0.5s, padding 0.5s;
 }
 #popCon{
   color:white;
   font-size: 5vh;
-  transition:1s;
+  transition:  visibility 0s, transform 1s;
   cursor: pointer;
 }
 #popText{
@@ -188,7 +188,7 @@ transition:  visibility 0s, filter 0.2s;
   top:50%;
   left:70%;
   transform:translate(-50%,-50%);
-  transition: .5s;
+  transition:  visibility 0s, transform 0.5s;
   cursor: pointer;
   cursor: pointer;
 }
@@ -197,7 +197,7 @@ transition:  visibility 0s, filter 0.2s;
    top:50%;
    left:40%;
    transform: translate(-50%,-50%);
-   transition: .3s;
+   transition:  visibility 0s, transform 0.3s, color 0.3s;
    color: rgba(255,255,255,0);
    white-space: pre;
    font-family: 'Ubuntu-Title', sans-serif;
@@ -215,7 +215,7 @@ transition:  visibility 0s, filter 0.2s;
    top:50%;
    left:40%;
    transform: translate(-50%,-50%);
-   transition: .5s;
+   transition:  visibility 0s, transform 0.5s, color 0.5s;
    color: rgba(255,255,255,1);
    white-space: pre;
    font-family: 'Ubuntu-Title', sans-serif;

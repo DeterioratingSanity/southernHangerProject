@@ -73,7 +73,7 @@
       </div>
 
     </div>
-    
+
     <div id="main">
     </div>
 
@@ -198,6 +198,7 @@ $('#ellip').click(function() {
   modal.style.display = "block";
   $("#container").css('visibility','hidden');
   $('.heroImg').css('filter','blur(5px) grayscale(100%)');
+  $('.popout').css('visibility','hidden');
   /*$('body').css('overflow','hidden');*/
   $('#head').css("background-image","url(./images/starburstGrey.svg)");
 
@@ -207,6 +208,7 @@ span.onclick = function() {
   modal.style.display = "none";
   $("#container").css('visibility','visible');
   $('.heroImg').css('filter','blur(0)');
+  $('.popout').css('visibility','visible');
   /*$('body').css('overflow','auto');*/
   $('#head').css("background-image","url(./images/starburstAlt.svg)");
 }
@@ -216,6 +218,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
     $("#container").css('visibility','visible');
     $('.heroImg').css('filter','blur(0)');
+    $('.popout').css('visibility','visible');
   /*$('body').css('overflow','auto');*/
   $('#head').css("background-image","url(./images/starburstAlt.svg)");
   }

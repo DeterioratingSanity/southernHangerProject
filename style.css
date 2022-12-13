@@ -183,8 +183,8 @@ transition:  visibility 0s, filter 0.2s;
   font-size: 5vh;
   transition:  visibility 0s, transform 1s;
   cursor: pointer;
-   font-family: 'Ubuntu-Title', sans-serif;
-  line-height: 10vh;
+  font-family: 'Ubuntu-Title', sans-serif;
+  margin-top: 1vh;
 }
 #popText{
   visibility: hidden;

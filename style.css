@@ -180,6 +180,7 @@ transition:  visibility 0s, filter 0.2s;
   font-size: 5vh;
   transition:  visibility 0s, transform 1s;
   cursor: pointer;
+   font-family: 'Ubuntu-Title', sans-serif;
 }
 #popText{
   visibility: hidden;

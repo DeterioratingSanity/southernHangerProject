@@ -20,6 +20,9 @@
     <div class="popout" id="homeButton">
       <span id="popCon">&gt;</span>
     </div>
+    <div class="popout" id="backButton" style="top:28vh">
+      <span id="popCon">&gt;</span>
+    </div>
 
     <div id="specials">
         <img src="../../../southernHangerProject/images/onwardReserve/shortSleeveMens/uga_ss_tee.png" alt="hero image" id="specialImg" ondragstart="return false;">
@@ -93,6 +96,10 @@
     })
     $('#homeButton').click(function(){
       window.open('../../../southernHangerProject/index.html','_self');
+      return false;
+    });
+    $('#backButton').click(function(){
+      window.open('../../../southernHangerProject/brands.onwardReserve/onwardReserve.html','_self');
       return false;
     });
 </script>

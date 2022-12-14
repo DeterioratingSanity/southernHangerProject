@@ -18,7 +18,7 @@
 
   <body>
     <div class="popout" id="homeButton">
-      <span id="popCon">&gt;</span>
+      <span class="popCon">&gt;</span>
     </div>
 
     <div id="specials">
@@ -84,11 +84,11 @@
       });
     });
     $('.popout').mouseover(function(){
-      $("#popCon").css('transform','rotateY(180deg)');
+      $(".popCon").css('transform','rotateY(180deg)');
       $('#popText').css('visibility',"visible");
     })
     $('.popout').mouseout(function(){
-      $("#popCon").css('transform','rotateY(0)');
+      $(".popCon").css('transform','rotateY(0)');
       $('#popText').css('visibility',"hidden");
     })
 

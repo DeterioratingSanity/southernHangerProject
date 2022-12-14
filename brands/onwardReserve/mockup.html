@@ -18,10 +18,10 @@
 
   <body>
     <div class="popout" id="homeButton">
-      <span class="popCon">&gt;</span>
+      <span class="popCon" id="homeCon">&gt;</span>
     </div>
     <div class="popout" id="backButton" style="top:22vh">
-      <span class="popCon">&gt;</span>
+      <span class="popCon" id="backCon">&gt;</span>
     </div>
 
     <div id="specials">
@@ -86,12 +86,21 @@
           location.reload(true);
       });
     });
-    $('.popout').mouseover(function(){
-      $(".popCon").css('transform','rotateY(180deg)');
+    $('#homeButton').mouseover(function(){
+      $("#homeCon").css('transform','rotateY(180deg)');
       $('#popText').css('visibility',"visible");
     })
-    $('.popout').mouseout(function(){
-      $(".popCon").css('transform','rotateY(0)');
+    $('#homeButton').mouseout(function(){
+      $("#homeCon").css('transform','rotateY(0)');
+      $('#popText').css('visibility',"hidden");
+    })
+      
+    $('#backButton').mouseover(function(){
+      $("#backCon").css('transform','rotateY(180deg)');
+      $('#popText').css('visibility',"visible");
+    })
+    $('#backButton').mouseout(function(){
+      $("#backCon").css('transform','rotateY(0)');
       $('#popText').css('visibility',"hidden");
     })
     $('#homeButton').click(function(){

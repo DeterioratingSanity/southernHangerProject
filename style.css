@@ -161,7 +161,7 @@ transition:  visibility 0s, filter 0.2s;
 }
 .popout{
   z-index: 999999999999999999;
-  position:absolute;
+  position:fixed;
   top: 8vh;
   display: flex;
   align-items:center;
@@ -233,4 +233,13 @@ transition:  visibility 0s, filter 0.2s;
 
 #cocoButton:hover::before{
   content:"coco's corner";
+}
+.brandItem {
+  width: 25vh;
+  height:25vh;
+  position:relative;
+  margin: 5vh;
+  border-radius:var(--radius-round);
+  transition: 0.5s;
+  cursor: pointer;
 }

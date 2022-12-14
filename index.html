@@ -45,7 +45,7 @@
       <div id="modalBox" class="modal">
         <span class="close">&times;</span>
         <div class="roster">
-          <img src="./images/logo/onwardreserve.png" alt="rotation" class="modalItem"  ondragstart="return false;">
+          <img src="./images/logo/onwardreserve.png" alt="rotation" class="modalItem onRes"  ondragstart="return false;">
           <img src="./images/logo/oldrow.png" alt="rotation" class="modalItem"  ondragstart="return false;">
           <img src="./images/logo/southerntide.png" alt="rotation" class="modalItem"  ondragstart="return false;">
           <img src="./images/logo/peachstatepride.png" alt="rotation" class="modalItem"  ondragstart="return false;">
@@ -81,6 +81,7 @@
 
       //if ($(window).width() < 1280) {
       var smallList = ["./images/logo/small/aftcosmall.png","./images/logo/small/coastalcottonsmall.png","./images/logo/small/oldrowsmall.png","./images/logo/small/southerntidesmall.png","./images/logo/small/fieldstonesmall.png","./images/logo/small/overundersmall.png", "./images/logo/small/marshwearsmall.png", "./images/logo/small/onwardreservesmall.png", "./images/logo/small/peachstatepridesmall.png"];
+      var smallLink = ["aftcoRot","coaCotRot","oldRowRot","souTidRot","fieStoRot","oveUndRot","marWeaRot","onRes","ptpRot"];
       var small = smallList.length - 1;
 
       $(document).ready(function(){
@@ -133,12 +134,26 @@
         console.log('rand five ' + randFive);
         */
         $('#rotOne').attr('src', smallList[randOne]);
-        $('#rotTwo').attr('src', smallList[randTwo]);
-        $('#rotThree').attr('src', smallList[randThree]);
-        $('#rotFour').attr('src', smallList[randFour]);
-        $('#rotFive').attr('src', smallList[randFive]);
-      });
+        $('#rotOne').addClass(smallLink[randOne]);
 
+        $('#rotTwo').attr('src', smallList[randTwo]);
+        $('#rotTwo').addClass(smallLink[randTwo]);
+
+        $('#rotThree').attr('src', smallList[randThree]);
+        $('#rotThree').addClass(smallLink[randThree]);
+
+        $('#rotFour').attr('src', smallList[randFour]);
+        $('#rotFour').addClass(smallLink[randFour]);
+
+        $('#rotFive').attr('src', smallList[randFive]);
+        $('#rotFive').addClass(smallLink[randFive]);
+        
+        //has to be in here. works both herein, only one outside...
+        $('.onRes').click(function(){
+          window.open('./brands/onwardReserve/onwardReserve.html', '_self');
+          return false;
+        });
+      });
 
     var radius = /*350;*/ $(window).height()/2.6; // adjust to move out items in and out
     var fields = $('.item'),

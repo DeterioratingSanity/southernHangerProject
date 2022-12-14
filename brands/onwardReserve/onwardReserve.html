@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Southern Hanger</title>
+    <link href="https://fonts.cdnfonts.com/css/ubuntu-title" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="description" content="Shopping in the Golden Isles">
+    <meta name="keywords" content="Shopping, St. Simons, Brunswick, Golden Isles, Apparel, Attire, Clothes, Style">
+    <meta name="author" content="W. Wilson">
+    <link rel="icon" type="image/x-icon" href="../../../southernHangerProject/images/favicon.png">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    -->
+  </head>
+
+  <body style="background-image: url('../../../southernHangerProject/images/starburstAlt.svg'); background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="popout" id="homeButton">
+      <span id="popCon">&gt;</span>
+    </div>
+
+    <div class="roster">
+      <img src="../../../southernHangerProject/images/onwardReserve/shortSleeveMens/uga_ss_tee.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/onwardReserve/shortSleeveMens/naty_champ_barn_tee.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+      <img src="../../../southernHangerProject/images/favicon.png" alt="rotation" class="brandItem"  ondragstart="return false;">
+  </div>
+
+  <script>
+    $('.brandItem').mouseover(function(){
+      $('.brandItem').addClass('off');
+      $(this).removeClass('off');
+     $(this).addClass('on');
+    });
+    $('.brandItem').mouseout(function(){
+      $('.brandItem').removeClass('off');
+      $(this).removeClass('on');
+    });
+
+    $('.popout').mouseover(function(){
+      $("#popCon").css('transform','rotateY(180deg)');
+      $('#popText').css('visibility',"visible");
+    })
+    $('.popout').mouseout(function(){
+      $("#popCon").css('transform','rotateY(0)');
+      $('#popText').css('visibility',"hidden");
+    })
+
+    $('#homeButton').click(function(){
+      window.open('../../../southernHangerProject/index.html','_self');
+      return false;
+    });
+  </script>
+</body>

@@ -178,7 +178,7 @@ transition:  visibility 0s, filter 0.2s;
   padding-left:20vh;
   transition:  visibility 0s, transform 0.5s, padding 0.5s;
 }
-#popCon{
+.popCon{
   color:white;
   font-size: 5vh;
   transition:  visibility 0s, transform 1s;
